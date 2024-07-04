@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Bootstrap CSS Styles -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  <!-- <link rel="stylesheet" href="styles/styles.css" /> -->
+  <link rel="stylesheet" href="styles/datos.css" />
+  <link rel="stylesheet" href="styles/nav.css" />
+  <link rel="stylesheet" href="styles/styles.css" />
+
+  <title>TODO CODE</title>
+</head>
+
+<body>
+  <div class="container">
+    <!-- Principal Menu -->
+    <!-- <iframe src="./menu.html" width="100%" height="60vh"></iframe> -->
+    <div class="main-content d-flex justify-content-around pt-2 pb-3 align-items-baseline">
+      <!-- Menu -->
+      <img class="menu-icon" alt="Search Icon">
+
+      <!-- Search -->
+      <img class="search-icon" alt="Search Icon">
+
+      <!-- Storefront name -->
+      <img class="title" alt="title">
+
+      <!-- Profile -->
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M16.4204 14.6835C18.6244 13.3415 20.0622 10.9457 20.0622 8.16682C20.0622 3.95009 16.6121 0.5 12.3954 0.5C8.17869 0.5 4.7286 3.95009 4.7286 8.16682C4.7286 10.9448 6.16644 13.3415 8.37046 14.6835C4.53728 16.1208 1.66205 19.475 0.895416 23.5H2.81223C3.77064 19.0915 7.69971 15.8332 12.3954 15.8332C17.0911 15.8332 21.0202 19.0915 21.9786 23.5H23.8954C23.1288 19.3792 20.254 16.025 16.4204 14.6835ZM6.64542 8.16682C6.64542 5.00438 9.23298 2.41682 12.3954 2.41682C15.5578 2.41682 18.1459 5.00438 18.1459 8.16682C18.1459 11.3292 15.5578 13.9168 12.3954 13.9168C9.23298 13.9168 6.64542 11.3292 6.64542 8.16682Z" fill="#575757" />
+      </svg>
+
+      <!--  Cart -->
+      <img class="cart" alt="cart">
+    </div>
+
+    <!-- Separator -->
+    <hr/>
+
+    <!-- Nav Menu -->
+    <nav class="navbar navbar-expand">
+      <!-- <div class="container"> -->
+        <div class="overflow-auto flex-wrap-nowrap">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#" id="data">Mis Datos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" id="tasks">Mis Tareas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" id="returns">Mis Devoluciones</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" id="communications">Mis Comunicaciones</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" id="bestFriends">Mis Mejores Amigos</a>
+            </li>
+          </ul>
+        </div>
+    </nav>
+
+    <div class="tab-data ">
+      <!-- Form -->
+      <!-- <div class="form"> -->
+        <form class="form row g-3 needs-validation mt-4 px-2">
+            <h1 class="tabs-title"></h1>
+          <div class="form-container bg-white">
+            <!-- Name -->
+            <div class="inputs col-md-4 position-relative">
+              <label for="validationName" class="form-label">Nombre</label>
+              <input type="text" class="form-control" id="validationName" placeholder="Nombre" required />
+            </div>
+            <!-- Email -->
+            <div class="inputs col-md-4 position-relative">
+              <label for="validationEmail" class="form-label">Email</label>
+              <input type="text" class="form-control" id="validationEmail" placeholder="Email" required />
+            </div>
+            <!-- Phone -->
+            <div class="inputs col-md-4 position-relative">
+              <label for="validationPhone" class="form-label">Teléfono</label>
+              <input type="text" class="form-control" id="validationPhone" placeholder="Teléfono" required />
+            </div>
+            <!-- Submit button -->
+            <div class="submit d-grid gap-2 mb-4 mt-4">
+              <button class="btn" type="submit">Guardar</button>
+            </div>
+          </div>
+        </form>
+      <!-- </div> -->
+    </div>
+
+    <!-- Tasks tab -->
+    <div class="content tab-tasks visually-hidden">
+      <h1 class="tabs-title mb-4"></h1>
+      <div class="tasks" data-task>
+        <!-- Tasks from API -->
+      </div>
+
+      <!-- Button trigger modal -->
+      <div class="submit d-grid gap-2 mb-4 mt-4">
+        <button class="btn addTask" type="submit" data-bs-toggle="modal" data-bs-target="#addTaskModal">Añadir tarea</button>
+      </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="addTaskModal" tabindex="-1" aria-labelledby="addTaskModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="addTaskModalLabel">Añadir Tarea</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+              <!-- Modal Form Add Task -->
+                <form id="addTaskForm">
+                  <!-- Title Task -->
+                  <div class="inputs col-md-4 position-relative">
+                    <label for="saveTitle" class="form-label">Nombre</label>
+                    <input type="text" class="form-control" id="saveTitle" placeholder="Nombre" required />
+                  </div>
+                  <!-- Task description -->
+                  <div class="inputs col-md-4 position-relative">
+                    <label for="saveDescription" class="form-label">Descripción</label>
+                    <textarea class="form-control" id="saveDescription" placeholder="Descripción" rows="5" cols="10" required></textarea>
+                  </div>
+                </form>
+              </div>
+
+              <!-- Modal footer -->
+              <div class="modal-footer">
+                <button type="button" class="btn cancel-task col-6" data-bs-dismiss="modal">Cancelar</button>
+                <button class="btn save-task submit col-6" type="submit">Guardar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+  <!-- end of modal -->
+    </div>
+
+    <!-- Returns tab -->
+    <div class="content tab-returns">
+      <h1 class="tabs-title mb-4"></h1>
+    </div>
+
+    <!-- Communications tab -->
+    <div class="content tab-communications">
+      <h1 class="tabs-title mb-4"></h1>
+    </div>
+
+    <!-- Friends tab -->
+    <div class="content tab-bestFriends">
+      <h1 class="tabs-title mb-4"></h1>
+    </div>
+
+  </div>
+</body>
+
+</html>
+
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="./js/index.js"></script>
+<script src="./js/saveTask.js"></script>
+<script src="./js/editTask.js"></script>

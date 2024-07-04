@@ -1,0 +1,38 @@
+  * {
+    scrollbar-width: none;
+  }
+
+  .navbar-nav .nav-item {
+    white-space: nowrap;
+  }
+
+  /* Menu Text */
+  .nav-item .nav-link {
+    color: #555555;
+    cursor: pointer;
+  }
+
+  /* Estilos cuando se enfoca (se toca) el enlace */
+  .navbar .nav-link:hover,
+  .navbar .nav-link:focus,
+  .nav-link.active {
+      color: #639605;
+      border-bottom-style: solid;
+      border-bottom-width: 4px;
+  }
+
+  .nav {
+    position: absolute;
+    top: 73px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  .navbar{
+    padding: 0 0 0 20px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 21.79px;
+    background-color: white;
+  }

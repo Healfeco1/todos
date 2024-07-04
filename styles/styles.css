@@ -1,0 +1,156 @@
+body{
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+}
+
+/* Body content */
+.content{
+  background-color: #f4f4f4;
+  padding: 40px 15px;
+}
+
+.container{
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-nav {
+    display: flex;
+    flex-wrap: nowrap; /* Evita que los elementos se envuelvan a la siguiente línea */
+    overflow-x: auto; /* Añade scroll horizontal */
+    -ms-overflow-style: -ms-autohiding-scrollbar; /* Estilo de scroll para IE/Edge */
+  }
+
+  .navbar-nav .nav-item {
+    white-space: nowrap; /* Evita el salto de línea para cada elemento */
+  }
+
+  /* Task Content Styles */
+  .task-description{
+    display: flex;
+    text-align: justify;
+  }
+
+  /* Trash Icon */
+  .trash-icon{
+    width: 18px ;
+    height: 18px;
+    content: url('../icons/trash.png');
+  }
+
+  .div-trash-ico{
+    text-align: end;
+  }
+
+  .task {
+    border: 2px solid #ccc;
+    padding: 15px 20px;
+    margin-bottom: 15px;
+    background-color: white;
+  }
+
+  /* Menu Styles */
+
+  .title {
+    width: 188px;
+    height: 27px;
+    content: url('../icons/title.png');
+  }
+
+  .search-icon {
+    width: 21px;
+    height: 20px;
+    content: url('../icons/search.png');
+  }
+
+  .cart {
+    width: 32px;
+    height: 26px;
+    content: url('../icons/cart.png');
+  }
+
+  .menu-icon {
+    width: 21px;
+    height: 21px;
+    content: url('../icons/menu.png');
+  }
+
+  .menu {
+    position: relative;
+    /* top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0; */
+  }
+
+  .main-content {
+    background-color: white;
+  }
+
+
+  hr {
+    margin: 0 !important;
+  }
+  
+  label {
+    font-family: 'Open Sans';
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 19.07px;
+  }
+
+  input.form-control {
+    font-family: 'Open Sans';
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 19.07px;
+  }
+
+  .tabs-title {
+    font-family: 'Open Sans';
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 27.24px;
+    text-align: left;
+  }
+
+  /* Task Styles */
+
+  .task-title {
+    font-family: 'Open Sans';
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 21.79px;
+  }
+
+  .task-content {
+    font-family: 'Open Sans';
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16.34px;
+    color: #777777;
+  }
+
+/* First title letter to uppercase */
+  .task-title::first-letter {
+    text-transform: uppercase;
+  }
+
+  textarea {
+    resize: none;
+  }
+
+.modal-footer {
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+
+.cancel-task {
+  color: #B3B3B3;
+}
+
+.save-task {
+  color: #FFF;
+}
